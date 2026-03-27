@@ -1,0 +1,31 @@
+{
+  "name": "payment-tracker",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "hardhat compile",
+    "deploy:sepolia": "hardhat run scripts/deploy.js --network sepolia",
+    "sync:contract": "node scripts/sync-contract.js",
+    "contract:prepare": "npm run compile && npm run sync:contract",
+    "dev": "vite --config frontend/vite.config.js",
+    "build": "vite build --config frontend/vite.config.js",
+    "preview": "vite preview --config frontend/vite.config.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.2.3",
+    "@vitejs/plugin-react": "^4.3.4",
+    "dotenv": "^17.3.1",
+    "ethers": "^5.8.0",
+    "hardhat": "^2.22.5",
+    "vite": "^5.4.19"
+  },
+  "dependencies": {
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  }
+}
