@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+require("dotenv").config({ override: true });
 
 async function main() {
   const artifactsPath = path.join(__dirname, "..", "artifacts", "contracts", "MultiWalletPaymentTracker.sol", "MultiWalletPaymentTracker.json");
